@@ -1,8 +1,8 @@
 class Transactions
 
-  attr_reader :balance, :credit, :debit, :print_statement, :date
+  attr_reader :balance, :credit, :debit, :receipt, :date
 
-  def initialize 
+  def initialize
     initialize_variables
   end
 
@@ -27,13 +27,13 @@ class Transactions
     @credit = 0
     @debit = 0
     @balance = 0
-    @print_statement = []
+    @receipt = []
     @deposited = false
     @withdrawn = false
   end
 
   def commit_transaction
-    @print_statement << [ @date, @credit, @debit, @balance ]
+    @receipt << [ @date, @credit, @debit, @balance ]
     clear_transaction_data
   end
 
@@ -51,7 +51,7 @@ class Transactions
     clear_data
   end
 
-    def clear_data
+  def clear_data
     @deposited = false
     @withdrawn = false
   end

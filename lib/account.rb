@@ -5,11 +5,11 @@ class Account
 
   attr_reader :transactions, :statement
 
-  def initialize(name, transactions: Transactions, statement: StatementPrinter)
+  def initialize(name, transactions: Transactions.new, statement: StatementPrinter.new)
     @name = name
     puts "Hi #{@name}, your account was created!"
-    @transactions = transactions.new
-    @statement = statement.new
+    @transactions = transactions
+    @statement = statement
   end
 
   def deposit(deposit_amount)
@@ -21,6 +21,6 @@ class Account
   end 
 
   def print_receipt
-   statement.print_statement(transactions.print_statement)
+   statement.print_statement(transactions.receipt)
   end
 end
