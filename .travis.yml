@@ -1,2 +1,2 @@
-language: ruby
+language: ruby 3.0.0
 script: bundle exec rake spec
