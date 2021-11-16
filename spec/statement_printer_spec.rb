@@ -1,12 +1,13 @@
-require 'spec_helper'
-require './lib/account'
 require './lib/statement_printer'
 
-describe StatementPrinter do
-  # let(:account) { double('account') }
-  # let(:transactions) { double('transactions', receipt: "date  ||  credit  ||  debit  ||  balance") } 
-  let(:statement) { StatementPrinter.new }
+describe StatementPrint do
+  let(:statementprint) { StatementPrint.new(statement) }
+  let(:statement) { [["11/06/21", 0.00, 0.00, 0.00]] }
 
  describe '#print_statement' do
+  it 'prints columns and data for statement' do
+    expect(statementprint.print_statement).to eq [["11/06/21", 0.00, 0.00, 0.00]]
+  end
+end
 
 end

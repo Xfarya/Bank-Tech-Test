@@ -1,13 +1,17 @@
-class StatementPrinter
+class StatementPrint
 
-  def print_statement(statement)
-    puts @transaction_table = ["date  ||  credit  ||  debit  ||  balance"]
-    @table = statement.reverse.each do |d, c, deb, b|
-    deb = '%.2f' % deb
-    c = '%.2f' % c
-    b = '%.2f' % b
-    puts ["#{d} || #{c} ||  #{deb}  ||  #{b}"].join('\n')
-    end
+  attr_accessor :statement
+
+  def initialize(statement)
+    @statement = statement
   end
 
+  def print_statement
+    puts " Date || Debit || Credit || Balance "
+    @statement.reverse.each { |date, deb, cr, bal|
+      deb = '%.2f' % deb
+      cr = '%.2f' % cr
+      bal = '%.2f' % bal
+    puts "#{date} || #{deb} || #{cr} || #{bal}" }
+  end
 end
