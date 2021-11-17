@@ -36,7 +36,6 @@ Looking at the criteria, decided to have three classes - one for the account, on
                                      So that I can store my money safely
                                I would like to be able to deposit into my bank account.
 
-
 <div align="center"><img width="312" alt="Screenshot 2021-11-16 at 20 08 38" src="https://user-images.githubusercontent.com/76533997/142058354-d758c7ab-96bd-4911-98ac-3ce01a705acf.png"></div>
 <hr>
 
@@ -50,7 +49,6 @@ Looking at the criteria, decided to have three classes - one for the account, on
                                                      As a user
                          So that I can see a record of transactions made to and from my account
                                    I'd like to be able to print a dated bank statement
-
 
  <div align="center"><img width="235" alt="Screenshot 2021-11-16 at 20 10 02" src="https://user-images.githubusercontent.com/76533997/142058374-dfe88fe9-6ca6-492f-97ad-9794da0fcf7c.png"></div>
 <!-- <img width="412" alt="Screenshot 2021-11-16 at 20 09 22" src="https://user-images.githubusercontent.com/76533997/142058383-f4e2afdb-243e-4b3b-ba23-a69e6bb76e89.png"> -->
@@ -81,7 +79,6 @@ There are numerous edge cases that could come up in this exercise. I chose to te
                                              'does not allow for negative values'
                                                  'does not allow string values'
 
-
 These will be added in further refactoring:
 
 #### Other considerations
@@ -89,7 +86,9 @@ These will be added in further refactoring:
 Data is presented to two decimal places (although this is not explicitly tested), as this is a state rather than a behaviour.
 
 <hr>
-
+<th>
+<tr>
+<td>
 ### Set up
 
 Ruby 3.0.0  
@@ -97,8 +96,8 @@ RSpec testing
 Rubocop  
 SimpleCov
 
-<hr>
-
+</td>
+<td>
 ### Installation
 
 Clone this repo,
@@ -108,12 +107,17 @@ and
 <code> cd Bank-Tech-Test</code>  
 <code>bundle install</code>
 
-<hr>
+</td>
+<td>
 
-#### Testing
+### Testing
 
 <code>cd Bank-Tech-Test</code>  
 <code> rspec </code>
+
+</td>
+</tr>
+</th>
 
 <hr>
 
