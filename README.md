@@ -88,9 +88,10 @@ Data is presented to two decimal places (although this is not explicitly tested)
 <hr>
 <table align="center">
 <tr>
-<td>
+<td width= "33%" align="center">
 
 ### Set up
+
 
 Ruby 3.0.0  
 RSpec testing  
@@ -98,21 +99,21 @@ Rubocop
 SimpleCov
 
 </td>
-<td>
+<td width= "33%" align="center">
 
 ### Installation
 
 Clone this repo,
-
 and
 
 <code> cd Bank-Tech-Test</code>  
 <code>bundle install</code>
 
 </td>
-<td>
+<td width= "33%" align="center">
 
 ### Testing
+
 
 <code>cd Bank-Tech-Test</code>  
 <code> rspec </code>
@@ -125,27 +126,71 @@ and
 
 #### Run
 
-example:
-
-<code> irb </code>
-
+<table align ="center">
+<tr>
+<td width= "33%">
+<code> irb </code> 
+ </td>
+  <td></td>
+  </tr>
+<tr>
+<td width= "33%">
 <code> require './lib/account'</code>  
-==> <strong>true</strong>
-
+  </td>
+ <td width="33%">
+ ==> <strong>true</strong>
+  </td>
+  </tr>
+  <tr>
+    <td>
 <code> account = Account.new("John")</code>  
-==> <strong>"Hi John, your account was created!"</strong>
-
-<code> account.deposit(500.5)</code>  
-==> <strong>"You deposited £500.50, your balance is now £500.50"</strong>
-
+    </td>
+    <td>
+      ==> <strong>"Hi John, your account was created!"</strong>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<code> account.deposit(500.5)</code> 
+    </td>
+    <td>
+      ==> <strong>"You deposited £500.50, your balance is now £500.50"</strong>
+    </td>
+  </tr>
+  <tr>
+    <td>
 <code> account.withdraw(300.5)</code>  
-==> <strong>"You withdrew £300.50, your balance is now £200.50"</strong>
-
+    </td>
+    <td>
+      ==> <strong>"You withdrew £300.50, your balance is now £200.50"</strong>
+    </td>
+  </tr>
+  <tr>
+    <td>
 <code> account.print_statement</code>
-
+</td>
+    <td>
+      
 ==>
 
 <strong>Date || Debit || Credit || Balance </strong>  
  <strong>16/11/2021 || 0.00 || 300.50 || 200.50 </strong>  
  <strong>16/11/2021 || 500.00 || 0.00. || 500.00 </strong>  
  <strong>16/11/2021 || 0.00 || 300.50 || 200.50 </strong>
+    </td>
+  </tr>
+  
+</table>
+
+
+
+
+
+
+
+
+ 
+
+
+
+
