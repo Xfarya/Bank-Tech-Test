@@ -1,3 +1,5 @@
+require './lib/transactions'
+
 class StatementPrint
 
   attr_accessor :statement

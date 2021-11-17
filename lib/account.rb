@@ -1,4 +1,5 @@
 require './lib/statement_printer'
+require './lib/transactions'
 
 class Account
 
@@ -9,12 +10,13 @@ class Account
     puts "Hi #{@name}, your account was created!\n"
     @balance = balance
     @statement = []
+    @transaction = Transactions.new
   end
 
   def deposit(amount)
     @balance += amount
     puts "You deposited £#{'%.2f' % amount}, your balance is now £#{'%.2f' % @balance}"
-    record_deposit_transaction(amount)
+    @transaction.record_deposit(amount, @balance)
   end
 
   def withdraw(amount)
@@ -23,25 +25,16 @@ class Account
     else
       @balance -= amount
       puts "You withdrew £#{'%.2f' % amount}, your balance is now £#{'%.2f' % @balance}"
-      record_withdraw_transaction(amount)
+      @transaction.record_withdraw(amount, @balance)
     end
   end
 
   def print_statement
-    print_statement = StatementPrint.new(@statement)
+    print_statement = StatementPrint.new(@transaction.statement)
     print_statement.print_statement
   end
 
   private
 
-  def record_withdraw_transaction(amount)
-    @date = Time.now.strftime("%d/%m/%Y")
-    @statement << [@date, 0.00, amount, @balance]
-  end 
-
-  def record_deposit_transaction(amount)
-    @date = Time.now.strftime("%d/%m/%Y")
-    @statement << [@date, amount, 0.00, @balance]
-  end 
 
 end
