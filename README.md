@@ -86,7 +86,7 @@ These will be added in further refactoring:
 Data is presented to two decimal places (although this is not explicitly tested), as this is a state rather than a behaviour.
 
 <hr>
-<th>
+<table align="center">
 <tr>
 <td>
 ### Set up
@@ -117,7 +117,7 @@ and
 
 </td>
 </tr>
-</th>
+</table>
 
 <hr>
 
