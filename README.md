@@ -89,6 +89,7 @@ Data is presented to two decimal places (although this is not explicitly tested)
 <table align="center">
 <tr>
 <td>
+
 ### Set up
 
 Ruby 3.0.0  
@@ -98,6 +99,7 @@ SimpleCov
 
 </td>
 <td>
+
 ### Installation
 
 Clone this repo,
