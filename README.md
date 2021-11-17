@@ -1,8 +1,8 @@
 # Bank Tech Test
 
 <div align="center">|| <a href="#accecptance-criteria">Criteria</a> ||
-<a href="#features">Features</a> ||
 <a href="#user-stories">User Stories</a> ||
+ <a href="#tdds">Testing</a> ||
 <a href="#set-up">Installation</a> ||           
  <hr>
   
