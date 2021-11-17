@@ -3,11 +3,11 @@ Simple program using REPL to imitate a bank account.
 
 <h2 align="center"> Acceptance Criteria </h2>
 
-                                  Given a client makes a deposit of 1000 on 10-01-2023   
-                                        And a deposit of 2000 on 13-01-2023   
-                                       And a withdrawal of 500 on 14-01-2023  
-                                        When she prints her bank statement   
-                                                Then she would see
+                                    Given a client makes a deposit of 1000 on 10-01-2023   
+                                            And a deposit of 2000 on 13-01-2023   
+                                          And a withdrawal of 500 on 14-01-2023  
+                                            When she prints her bank statement   
+                                                    Then she would see
 
 ```                     
                                     date       || credit  || debit  || balance  
