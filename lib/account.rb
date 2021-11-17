@@ -3,28 +3,29 @@ require './lib/transactions'
 
 class Account
 
-  attr_reader :balance, :date, :statement
+  attr_reader :balance, :date
 
-  def initialize(name, balance = 0, statement = [])
+  def initialize(name, balance = 0)
     @name = name
     puts "Hi #{@name}, your account was created!\n"
     @balance = balance
-    @statement = []
     @transaction = Transactions.new
   end
 
   def deposit(amount)
+    is_valid?(amount)
     @balance += amount
-    puts "You deposited £#{'%.2f' % amount}, your balance is now £#{'%.2f' % @balance}"
+    puts "You deposited £#{'%.2f' % amount}, your balance is now £#{'%.2f' % balance}"
     @transaction.record_deposit(amount, @balance)
   end
 
   def withdraw(amount)
+    is_valid?(amount)
     if @balance <= 0
       puts "You do no have sufficient funds"
     else
       @balance -= amount
-      puts "You withdrew £#{'%.2f' % amount}, your balance is now £#{'%.2f' % @balance}"
+      puts "You withdrew £#{'%.2f' % amount}, your balance is now £#{'%.2f' % balance}"
       @transaction.record_withdraw(amount, @balance)
     end
   end
@@ -34,7 +35,10 @@ class Account
     print_statement.print_statement
   end
 
-  private
+  private 
 
+  def is_valid?(amount)
+    raise 'Invalid input, please enter a number' if amount.is_a?(String)
+  end
 
 end
