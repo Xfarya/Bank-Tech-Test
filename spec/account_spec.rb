@@ -34,17 +34,30 @@ describe Account do
   end
 
   describe '#deposit' do
+
+    it 'does not accept strings as input' do
+      expect { account.deposit("five")}.to raise_error('Invalid input, please enter a number')
+    end
+
     it 'accepts a deposit amount' do
       expect(account.deposit(500)).to eq [["#{date}", 500, 0.00, 500]]
     end
   end
 
   describe '#withdraw' do
+
+    it 'does not accept strings as input' do
+      account.deposit(100)
+      expect { account.withdraw("five")}.to raise_error('Invalid input, please enter a number')
+    end
+
     it 'accepts a withdrawal amount' do
       account.deposit(400)
       expect(account.withdraw(200)).to eq [["#{date}", 400, 0.00, 400], ["#{date}", 0.00, 200, 200]]
     end
   end
+
+
 
   describe '#print_statement' do
 
