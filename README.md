@@ -3,7 +3,7 @@
 <div align="center">|| <a href="#accecptance-criteria">Criteria</a> ||
 <a href="#user-stories">User Stories</a> ||
 <a href="#tdd">Testing</a> ||
-<a href="#set-up">Installation</a> ||           
+<a href="#set-up">Installation</a> || </div>          
  <hr>
   
 Simple program using REPL to imitate a bank account.
@@ -31,30 +31,35 @@ Looking at the criteria, decided to have three classes - one for the account, on
 
 ### User Stories
 
+ ```
  As a user  
  So that I can store my money in one place  
  I would like to be able to create a bank account.  
+ ```
 
 <div align="center"><img width="461" alt="Screenshot 2021-11-16 at 20 08 02" src="https://user-images.githubusercontent.com/76533997/142058333-b5b86c1a-2dc3-44ae-9c43-f8aa69d06dd5.png"></div>
-<hr>
 
+```
  As a user  
  So that I can store my money safely  
  I would like to be able to deposit into my bank account.  
+```
 
 <div align="center"><img width="312" alt="Screenshot 2021-11-16 at 20 08 38" src="https://user-images.githubusercontent.com/76533997/142058354-d758c7ab-96bd-4911-98ac-3ce01a705acf.png"></div>
-<hr>
- 
+
+ ```
  As a user  
  So that I can easily take my money as and when I need it  
  I would like to be able to withdraw from my bank account.  
+```
 
 <div align="center"><img width="413" alt="Screenshot 2021-11-16 at 20 09 02" src="https://user-images.githubusercontent.com/76533997/142058364-922134f8-581c-4096-9cf4-4935a050b6d7.png"></div>
-<hr>
 
+```
  As a user  
  So that I can see a record of transactions made to and from my account  
  I'd like to be able to print a dated bank statement.  
+```
 
  <div align="center"><img width="235" alt="Screenshot 2021-11-16 at 20 10 02" src="https://user-images.githubusercontent.com/76533997/142058374-dfe88fe9-6ca6-492f-97ad-9794da0fcf7c.png"></div>
 <!-- <img width="412" alt="Screenshot 2021-11-16 at 20 09 22" src="https://user-images.githubusercontent.com/76533997/142058383-f4e2afdb-243e-4b3b-ba23-a69e6bb76e89.png"> -->
